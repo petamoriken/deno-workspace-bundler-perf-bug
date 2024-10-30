@@ -7,6 +7,9 @@
     ],
     "jsx": "react-jsx"
   },
-  "workspace": ["./frontend"],
-  "nodeModulesDir": "manual"
+  "workspace": ["./frontend", "./lib"],
+  "nodeModulesDir": "manual",
+  "imports": {
+    "@std/path": "jsr:@std/path@^1.0.7"
+  }
 }

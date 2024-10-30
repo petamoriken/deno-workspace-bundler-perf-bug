@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/path@^1.0.7": "1.0.7",
     "npm:@eslint/js@^9.13.0": "9.13.0",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.11": "18.3.12",
@@ -10,12 +11,18 @@
     "npm:eslint-plugin-react-refresh@~0.4.13": "0.4.14_eslint@9.13.0",
     "npm:eslint@^9.13.0": "9.13.0",
     "npm:globals@^15.11.0": "15.11.0",
+    "npm:leftpad@^0.0.1": "0.0.1",
     "npm:react-dom@^18.3.1": "18.3.1_react@18.3.1",
     "npm:react@^18.3.1": "18.3.1",
     "npm:typescript-eslint@^8.10.0": "8.12.2_@typescript-eslint+parser@8.12.2__eslint@9.13.0__typescript@5.6.3_eslint@9.13.0_typescript@5.6.3",
     "npm:typescript@~5.6.2": "5.6.3",
     "npm:vite@5.4.10": "5.4.10",
     "npm:vite@^5.4.9": "5.4.10"
+  },
+  "jsr": {
+    "@std/path@1.0.7": {
+      "integrity": "76a689e07f0e15dcc6002ec39d0866797e7156629212b28f27179b8a5c3b33a1"
+    }
   },
   "npm": {
     "@ampproject/remapping@2.3.0": {
@@ -905,6 +912,9 @@
         "json-buffer"
       ]
     },
+    "leftpad@0.0.1": {
+      "integrity": "sha512-kBAuxBQJlJ85LDc+SnGSX6gWJnJR9Qk4lbgXmz/qPfCOCieCk7BgoN3YvzoNr5BUjqxQDOQxawJJvXXd6c+6Mg=="
+    },
     "levn@0.4.1": {
       "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
       "dependencies": [
@@ -1184,6 +1194,9 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "jsr:@std/path@^1.0.7"
+    ],
     "members": {
       "frontend": {
         "packageJson": {
@@ -1203,6 +1216,11 @@
             "npm:vite@^5.4.9"
           ]
         }
+      },
+      "lib": {
+        "dependencies": [
+          "npm:leftpad@^0.0.1"
+        ]
       }
     }
   }

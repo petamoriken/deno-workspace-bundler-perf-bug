@@ -1,0 +1,10 @@
+{
+  "name": "@scope/lib",
+  "version": "0.1.0",
+  "imports": {
+    "leftpad": "npm:leftpad@^0.0.1"
+  },
+  "exports": {
+    "./leftpad": "./leftpad.ts"
+  }
+}
